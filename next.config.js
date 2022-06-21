@@ -1,6 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
+  exportPathMap: async function (defaultPathMap) {
+    const pathMap = { ...defaultPathMap };
 
-module.exports = nextConfig
+    for (const [path, config] of Object.entries(defaultPathMap)) {
+      if (path === "/") {
+        pathMap[path] = config;
+      } else {
+        pathMap[`${path}/index`] = config;
+      }
+    }
+
+    return pathMap;
+  },
+  images: {
+    loader: "akamai",
+    path: "/",
+  },
+};
+
+module.exports = nextConfig;

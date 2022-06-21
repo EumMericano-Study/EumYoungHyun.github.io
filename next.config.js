@@ -14,6 +14,10 @@ const nextConfig = {
 
     return pathMap;
   },
+  images: {
+    loader: "akamai",
+    path: "/",
+  },
 };
 
 module.exports = nextConfig;

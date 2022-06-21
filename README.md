@@ -6,3 +6,4 @@ github.io 블로그 제작ing...
 
 1. Next export with exportPathMap in next.config.js[https://github.com/vercel/next.js/issues/36855]
 2. Next export Image Optimization 설정 문제[https://kingsubin.tistory.com/475]
+3. deploy next js on github.io using github action [https://www.youtube.com/watch?v=yRz8D_oJMWQ]
